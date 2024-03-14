@@ -23,7 +23,7 @@ class DataTableCell extends WireData implements Module {
 		// Table headers
 		foreach($html->find('thead th') as $th) {
 			// Get header sanitized as a page name
-			$header = $th->find('text', 0)->innertext;
+			$header = $th->find('text', 0) ? $th->find('text', 0)->innertext : '';
 			$header_san = $this->wire()->sanitizer->pageNameTranslate($header);
 			// Set as data-dtc attribute
 			$th->setAttribute('data-dtc', $header);

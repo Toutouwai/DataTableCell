@@ -3,7 +3,7 @@
 $info = array(
 	'title' => 'Data Table Cell',
 	'summary' => 'Adds an identifying data attribute to each MarkupAdminDataTable cell derived from the column title.',
-	'version' => '0.1.0',
+	'version' => '0.1.1',
 	'author' => 'Robin Sallis',
 	'href' => 'https://github.com/Toutouwai/DataTableCell',
 	'icon' => 'table',
