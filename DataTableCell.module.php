@@ -17,7 +17,8 @@ class DataTableCell extends WireData implements Module {
 	protected function afterRender(HookEvent $event) {
 		require_once __DIR__ . '/simple_html_dom_rps.php';
 
-		$html = str_get_html($event->return);
+		// Including the first five arguments because argument five (strip line breaks) should be false
+		$html = str_get_html($event->return, true, true, DEFAULT_TARGET_CHARSET, false);
 		$headers = [];
 
 		// Table headers
